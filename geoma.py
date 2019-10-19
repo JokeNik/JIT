@@ -24,15 +24,15 @@ gama = torad(gama)
 phi = torad(phi)
 
 #Считаеаем координаты трапеции
-x1 = (x + math.tan(alpha - gama) * h) * math.cos(-phi) - (y - h // (math.cos(alpha - gama) * math.tan(beta))) * math.sin(-phi)
-y1 = (x + math.tan(alpha - gama) * h) * math.sin(-phi) + (y - h // (math.cos(alpha - gama) * math.tan(beta))) * math.cos(-phi)
-x2 = (x + math.tan(alpha - gama) * h) * math.cos(-phi) - (y + h // (math.cos(alpha - gama) * math.tan(beta))) * math.sin(-phi)
-y2 = (x + math.tan(alpha - gama) * h) * math.sin(-phi) + (y + h // (math.cos(alpha - gama) * math.tan(beta))) * math.cos(-phi)
+x1 = (x + math.tan(alpha - gama) * h) * math.cos(-phi) - (y - h / (math.cos(alpha - gama)) * math.tan(beta)) * math.sin(-phi)
+y1 = (x + math.tan(alpha - gama) * h) * math.sin(-phi) + (y - h / (math.cos(alpha - gama)) * math.tan(beta)) * math.cos(-phi)
+x2 = (x + math.tan(alpha - gama) * h) * math.cos(-phi) - (y + h / (math.cos(alpha - gama)) * math.tan(beta)) * math.sin(-phi)
+y2 = (x + math.tan(alpha - gama) * h) * math.sin(-phi) + (y + h / (math.cos(alpha - gama)) * math.tan(beta)) * math.cos(-phi)
 
-x3 = (x + math.tan(alpha + gama) * h) * math.cos(-phi) - (y - h // (math.cos(alpha + gama) * math.tan(beta))) * math.sin(-phi)
-y3 = (x + math.tan(alpha + gama) * h) * math.sin(-phi) + (y - h // (math.cos(alpha + gama) * math.tan(beta))) * math.cos(-phi)
-x4 = (x + math.tan(alpha + gama) * h) * math.cos(-phi) - (y + h // (math.cos(alpha + gama) * math.tan(beta))) * math.sin(-phi)
-y4 = (x + math.tan(alpha + gama) * h) * math.sin(-phi) + (y + h // (math.cos(alpha + gama) * math.tan(beta))) * math.cos(-phi)
+x3 = (x + math.tan(alpha + gama) * h) * math.cos(-phi) - (y - h / (math.cos(alpha + gama)) * math.tan(beta)) * math.sin(-phi)
+y3 = (x + math.tan(alpha + gama) * h) * math.sin(-phi) + (y - h / (math.cos(alpha + gama)) * math.tan(beta)) * math.cos(-phi)
+x4 = (x + math.tan(alpha + gama) * h) * math.cos(-phi) - (y + h / (math.cos(alpha + gama)) * math.tan(beta)) * math.sin(-phi)
+y4 = (x + math.tan(alpha + gama) * h) * math.sin(-phi) + (y + h / (math.cos(alpha + gama)) * math.tan(beta)) * math.cos(-phi)
 
 #print(alpha, beta, gama, phi, sep = " ")
 #Вывод вершин трапеции в порядке обхода
